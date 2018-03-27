@@ -32,6 +32,7 @@ var d2="";
 var b = document.getElementById("origin-input");
 var c = document.getElementById("destination-input");
 var a = document.getElementById("dm");
+
 if(document.getElementById("SLat")){
 s1=document.getElementById("SLat").value;
 }
@@ -50,13 +51,6 @@ var submitBtn = document.getElementById("submit");
 var b = b.value;
 var c = c.value;
 //var a = a.value;
-var s1 = s1.value;
-var s2 = s2.value;
-//var d1 = d1.value;
-//var d2 = d2.value;
-
-alert(s1);
-console.log(s1);
 
 var user = firebase.auth().currentUser;
 var ab = user.displayName;
@@ -70,11 +64,11 @@ Source: b,
 Destination: c,
 Booking_Date: date,
 Booking_Time: time,
-Source_Latitude: s1
+Source_Latitude: s1,
+Source_Longitude: s2,
+Destination_Latitude: d1,
+Destination_Longitude: d2
 //Rate: a
-//Source Longitude: s2,
-//Destination Latitude: d1,
-//Destination Longitude: d2
 }
 
 firebaseRef.set(data);
