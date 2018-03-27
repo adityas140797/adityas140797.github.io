@@ -29,7 +29,7 @@ var currentDate = new Date(),
 
 var b = document.getElementById("origin-input");
 var c = document.getElementById("destination-input");
-//var a = document.getElementById("dm");
+var a = document.getElementById("dm");
 //var s1 = document.getElementById("SLan");
 //var s2 = document.getElementById("SLon");
 //var d1 = document.getElementById("DLan");
@@ -39,7 +39,7 @@ var submitBtn = document.getElementById("submit");
 
 var b = b.value;
 var c = c.value;
-var a = "yes";
+var a = a.value;
 //var s1 = s1.value;
 //var s2 = s2.value;
 //var d1 = d1.value;
