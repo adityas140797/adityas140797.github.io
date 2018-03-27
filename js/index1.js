@@ -38,10 +38,10 @@ var submitBtn = document.getElementById("submit");
 var b = b.value;
 var c = c.value;
 //var a = a.value;
-var s1 = s1.value;
-//var s2 = s2.value;
-//var d1 = d1.value;
-//var d2 = d2.value;
+var s1 = "s1";
+var s2 = "s2";
+var d1 = "d1";
+var d2 = "d2";
 
 var user = firebase.auth().currentUser;
 var ab = user.displayName;
@@ -55,11 +55,11 @@ Source: b,
 Destination: c,
 Booking_Date: date,
 Booking_Time: time,
-Source_Latitude: b
+Source_Latitude: s1,
 //Rate: a
-//Source Longitude: s2,
-//Destination Latitude: d1,
-//Destination Longitude: d2
+Source Longitude: s2,
+Destination Latitude: d1,
+Destination Longitude: d2
 }
 
 firebaseRef.set(data);
