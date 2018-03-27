@@ -31,7 +31,9 @@ var d1="";
 var d2="";
 var b = document.getElementById("origin-input");
 var c = document.getElementById("destination-input");
-var a = document.getElementById("dm");
+//var a = document.getElementById("dm");
+
+var a = sessionStorage.getItem("clickcountes");
 
 if(document.getElementById("SLat")){
 s1=document.getElementById("SLat").value;
@@ -67,8 +69,8 @@ Booking_Time: time,
 Source_Latitude: s1,
 Source_Longitude: s2,
 Destination_Latitude: d1,
-Destination_Longitude: d2
-//Rate: a
+Destination_Longitude: d2,
+Rate: a
 }
 
 firebaseRef.set(data);
