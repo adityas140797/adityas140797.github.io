@@ -34,7 +34,7 @@ roll: roll,
 age: age,
 phone: phone,
 aadhaar: aadhaar,
-//a: abcd;
+a: abcd;
 }
 
 firebaseRef.set(data);
