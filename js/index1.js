@@ -28,7 +28,7 @@ var currentDate = new Date(),
 var b = document.getElementById("origin-input");
 var c = document.getElementById("destination-input");
 //var a = document.getElementById("dm");
-var s1 = document.getElementById("SLan");
+//var s1 = document.getElementById("SLan");
 //var s2 = document.getElementById("SLon");
 //var d1 = document.getElementById("DLan");
 //var d2 = document.getElementById("DLon");
@@ -56,10 +56,10 @@ Destination: c,
 Booking_Date: date,
 Booking_Time: time,
 Source_Latitude: s1,
+Source_Longitude: s2,
+Destination_Latitude: d1,
+Destination_Longitude: d2
 //Rate: a
-Source Longitude: s2,
-Destination Latitude: d1,
-Destination Longitude: d2
 }
 
 firebaseRef.set(data);
