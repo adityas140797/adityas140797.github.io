@@ -55,7 +55,7 @@ Source: b,
 Destination: c,
 Booking_Date: date,
 Booking_Time: time,
-Source_Latitude: s1
+Source_Latitude: b
 //Rate: a
 //Source Longitude: s2,
 //Destination Latitude: d1,
