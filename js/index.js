@@ -19,7 +19,7 @@ var roll = number.value;
 var age = age.value;
 var phone = phone.value;
 var aadhaar = aadhaar.value;
-//var a = "yes";
+var a = "yes";
 
 var user = firebase.auth().currentUser;
 var ab = user.displayName;
@@ -33,8 +33,8 @@ name: ab,
 roll: roll,
 age: age,
 phone: phone,
-aadhaar: aadhaar
-//a: a;
+aadhaar: aadhaar,
+a: a
 }
 
 firebaseRef.set(data);
