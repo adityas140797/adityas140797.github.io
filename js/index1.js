@@ -9,6 +9,7 @@ var config = {
 firebase.initializeApp(config);
 
 function aabb(){
+	debugger;
 
 var currentDate = new Date(),
       day = currentDate.getDate(),
@@ -24,14 +25,25 @@ var currentDate = new Date(),
 	 minutes = "0" + minutes;
   }
 	var time = hours + ":" + minutes;
-
+var s1="";
+var s2="";
+var d1="";
+var d2="";
 var b = document.getElementById("origin-input");
 var c = document.getElementById("destination-input");
-var s1 = document.getElementById("SLan");
-//var s2 = document.getElementById("SLon");
-//var d1 = document.getElementById("DLan");
-//var d2 = document.getElementById("DLon");
-//var a = document.getElementById("dm");
+var a = document.getElementById("dm");
+if(document.getElementById("SLat")){
+s1=document.getElementById("SLat").value;
+}
+if(document.getElementById("SLon")){
+s2=document.getElementById("SLon").value;
+}
+if(document.getElementById("DLat")){
+d1=document.getElementById("DLat").value;
+}
+if(document.getElementById("DLon")){
+d2=document.getElementById("DLon").value;
+}
 
 var submitBtn = document.getElementById("submit");	
 
@@ -39,9 +51,12 @@ var b = b.value;
 var c = c.value;
 //var a = a.value;
 var s1 = s1.value;
-var s2 = "s2";
-var d1 = "d1";
-var d2 = "d2";
+var s2 = s2.value;
+//var d1 = d1.value;
+//var d2 = d2.value;
+
+alert(s1);
+console.log(s1);
 
 var user = firebase.auth().currentUser;
 var ab = user.displayName;
@@ -55,11 +70,11 @@ Source: b,
 Destination: c,
 Booking_Date: date,
 Booking_Time: time,
-Source_Latitude: s1,
-Source_Longitude: s2,
-Destination_Latitude: d1,
-Destination_Longitude: d2
+Source_Latitude: s1
 //Rate: a
+//Source Longitude: s2,
+//Destination Latitude: d1,
+//Destination Longitude: d2
 }
 
 firebaseRef.set(data);
