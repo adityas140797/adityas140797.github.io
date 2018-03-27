@@ -33,7 +33,7 @@ name: ab,
 roll: roll,
 age: age,
 phone: phone,
-aadhaar: aadhaar,
+aadhaar: aadhaar
 //a: a;
 }
 
