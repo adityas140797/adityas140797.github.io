@@ -67,8 +67,8 @@ Destination: c,
 Booking_Date: date,
 Booking_Time: time,
 Source_Latitude: s1,
-Source_Longitude: s2,
-Destination_Latitude: d1,
+Destination_Latitude: s2,
+Source_Longitude: d1,
 Destination_Longitude: d2,
 Rate: a
 }
