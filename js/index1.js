@@ -9,8 +9,6 @@ var config = {
 firebase.initializeApp(config);
 
 function aabb(){
-	
-alert(abc);
 
 var currentDate = new Date(),
       day = currentDate.getDate(),
@@ -30,22 +28,24 @@ var currentDate = new Date(),
 var b = document.getElementById("origin-input");
 var c = document.getElementById("destination-input");
 //var a = document.getElementById("dm");
-var s1 = document.getElementById("SLan");
+var s1 = document.getElementById("SLan").value;
 //var s2 = document.getElementById("SLon");
 //var d1 = document.getElementById("DLan");
 //var d2 = document.getElementById("DLon");
+
+//alert(b);
 
 var submitBtn = document.getElementById("submit");	
 
 var b = b.value;
 var c = c.value;
 //var a = a.value;
-var s1 = s1.value;
+//var s1 = s1.value;
 //var s2 = s2.value;
 //var d1 = d1.value;
 //var d2 = d2.value;
 
-//alert(s1);
+alert(b);
 
 var user = firebase.auth().currentUser;
 var ab = user.displayName;

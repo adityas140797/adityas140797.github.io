@@ -144,9 +144,13 @@
   </div><!-- /.container-fluid -->
 </nav>
   
-  <form method="get" action="confirmation.html" onclick="aabb()">
-	<input id="origin-input" class="controls" type="text"
+  <form method="get" onclick="aabb()">
+  <input id="origin-input" class="controls" type="text"
         placeholder="Enter source" style="color:black" name="Source" required="required">	
+		<input id="SLat" class="controls"  type="hidden">	
+		<input id="SLon" class="controls" type="hidden">	
+		<input id="DLat" class="controls" type="hidden">	
+	<input id="DLon" class="controls"  type="hidden">	
 	
     <input id="destination-input" class="controls" type="text"
         placeholder="Enter destination" style="color:black" name="Destination" required="required">
@@ -155,10 +159,7 @@
 		&nbsp;&nbsp;&nbsp;&nbsp; <b>Time:</b> <p style="display:inline" id="dem"></p>
 		&nbsp;&nbsp;&nbsp;&nbsp; <p style="display:inline" id="dm"></p>
 		
-		<p hidden id="SLat"></p>
-		<p hidden id="SLon"></p>
-		<p hidden id="DLat"></p>
-		<p hidden id="DLon"></p>
+		
 		
 		<br> <button id="abc" style="position:absolute; bottom:63%; right:30%; z-index: 1;" class="btn btn-success"> Proceed further </button> </form>
  		
@@ -305,10 +306,10 @@ firebaseRef.on('value', function(snapshot) {
 			var dk = response.routes[0].bounds.f.b
 			var ds = response.routes[0].bounds.f.f
 			
-			document.getElementById("SLat").innerHTML = de;
-			document.getElementById("SLon").innerHTML = dl;
-			document.getElementById("DLat").innerHTML = dk;
-			document.getElementById("DLon").innerHTML = ds;
+			document.getElementById("SLat").value = de;
+			document.getElementById("SLon").value = dl;
+			document.getElementById("DLat").value = dk;
+			document.getElementById("DLon").value = ds;
 	
 			    document.getElementById("demo").innerHTML = d;
 				document.getElementById("dem").innerHTML = k;
