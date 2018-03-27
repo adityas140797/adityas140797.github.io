@@ -29,8 +29,8 @@ var currentDate = new Date(),
 
 var b = document.getElementById("origin-input");
 var c = document.getElementById("destination-input");
-var a = document.getElementById("dm");
-//var s1 = document.getElementById("SLan");
+//var a = document.getElementById("dm");
+var s1 = document.getElementById("SLan");
 //var s2 = document.getElementById("SLon");
 //var d1 = document.getElementById("DLan");
 //var d2 = document.getElementById("DLon");
@@ -39,8 +39,8 @@ var submitBtn = document.getElementById("submit");
 
 var b = b.value;
 var c = c.value;
-var a = a.value;
-//var s1 = s1.value;
+//var a = a.value;
+var s1 = s1.value;
 //var s2 = s2.value;
 //var d1 = d1.value;
 //var d2 = d2.value;
@@ -59,7 +59,7 @@ Source: b,
 Destination: c,
 Booking_Date: date,
 Booking_Time: time,
-Source_Latitude: a
+Source_Latitude: s1
 //Rate: a
 //Source Longitude: s2,
 //Destination Latitude: d1,
