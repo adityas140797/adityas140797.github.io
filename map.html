@@ -206,7 +206,7 @@ firebaseRef.on('value', function(snapshot) {
     });
 	
 	firebase.auth().onAuthStateChanged(function(user) { 
-  if (user.emailVerified) { alert('Email');
+  if (user.emailVerified) { alert(user.emailVerified);
   }
   else {
     alert('Email is not verified. Verify first In order to proceed forward.');
