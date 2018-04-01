@@ -14,7 +14,10 @@ var firebaseRef = firebase.database().ref('Users').child(uid);
 
 firebaseRef.on('value', function(snapshot) {
    message = snapshot.val();
-   if(user){}
+   
+   alert(message);
+   
+   if(message.a == "yes"){}
    else{
    alert("You have not filled your personal details yet")
    window.location.assign("index2.html");} });
