@@ -9,7 +9,6 @@ var config = {
 firebase.initializeApp(config);
 
 function aabb(){
-	debugger;
 
 var currentDate = new Date(),
       day = currentDate.getDate(),
