@@ -45,7 +45,7 @@ var firebaseRef = firebase.database().ref('Payment').child(uid);
 firebaseRef.on('value', function(snapshot) {
    message = snapshot.val();
 
-    var data = encodeURIComponent(uid+"\n\n:"+"Name"+" : "+message.NAME+"\n\n"+"Source"+" : "+message.From+"\n\n"+"Destination"+" : "+message.To+"\n\n"+"Booking Date"+" : "+message.Booking_Date+"\n\n"+"Booking Time"+" : "+message.Booking_Time+"\n\n"+"Source Location"+" : "+message.Source_Longitude+","+message.Source_Latitude+"\n\n"+"Destination Location"+" : "+message.Destination_Longitude+","+message.Destination_Latitude),
+    var data = encodeURIComponent(uid+"\n\n:"+"Name"+" : "+message.NAME+"\n\n"+"Source"+" : "+message.From+"\n\n"+"Destination"+" : "+message.To+"\n\n"+"Booking Date"+" : "+message.Booking_Date+"\n\n"+"Booking Time"+" : "+message.Booking_Time+"\n\n"+"Source Location"+" : "+message.S+"\n\n"+"Destination Location"+" : "+message.DEST),
       size = document.getElementById("size").value,
       chart = "http://chart.googleapis.com/chart?cht=qr&chs=" + size + "x" + size + "&choe=UTF-8&chld=L|0&chl=" + data;
     if (data === "") {

@@ -66,8 +66,8 @@ From: b,
 To: c,
 Booking_Date: date,
 Booking_Time: time,
-S: "lat/lng: ("+s2+","+s1+")",
-DEST: "lat/lng: ("+d2+","+d1+")",
+S: "lat/lng: ("+d1+","+s1+")",
+DEST: "lat/lng: ("+d2+","+s2+")",
 Fare: a
 }
 
