@@ -12,6 +12,8 @@ var ab = user.displayName;
 var message;
 var firebaseRef = firebase.database().ref('Users').child(uid);
 
+alert(user);
+
 firebaseRef.on('value', function(snapshot) {
    message = snapshot.val();
    if(message.a == "yes"){}
