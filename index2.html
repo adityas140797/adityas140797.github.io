@@ -9,7 +9,7 @@
 	firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
     } else {
-    //window.location.assign("index.html");
+    window.location.assign("index.html");
     }
     });
 	</script>
@@ -61,8 +61,8 @@
 			<form method="get" action="verification.html" onclick="abc()">
 			<div>
 			<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <label> <font color="orange"> Name </font> </label> &nbsp; <input type="text" id="name" class="form-control" style="display:inline ; width:200px;" required="required"/> </p>
-			<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <label> <font color="orange"> Age </font> </label> &nbsp;&nbsp; <input type="text" class="form-control" style="display:inline ; width:200px;" id="age" required="required"/></p>
-			<p>&nbsp; &nbsp; <label> <font color="orange"> Phone No. </font> </label> &nbsp; <input type="text" id="phone" class="form-control" style="display:inline ; width:200px;" required="required"/></p>
+			<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <label> <font color="orange"> Age </font> </label> &nbsp;&nbsp; <input type="number" class="form-control" style="display:inline ; width:200px;" id="age" required="required"/></p>
+			<p>&nbsp; &nbsp; <label> <font color="orange"> Phone No. </font> </label> &nbsp; <input type="number" id="phone" class="form-control" style="display:inline ; width:200px;" required="required"/></p>
             <br> <button id="submitBtn" class="btn btn-success"> Submit </button>
 			</form>
     </center></body>

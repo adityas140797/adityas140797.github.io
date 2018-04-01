@@ -61,16 +61,14 @@ var uid = user.uid;
 var firebaseRef = firebase.database().ref('Payment').child(uid);
 
 var data = {
-Name: ab,
-Source: b,
-Destination: c,
+NAME: ab,
+From: b,
+To: c,
 Booking_Date: date,
 Booking_Time: time,
-Source_Latitude: s1,
-Destination_Latitude: s2,
-Source_Longitude: d1,
-Destination_Longitude: d2,
-Rate: a
+//S: "lat/lng:("s2,s1")",
+//D: "lat/lng:("d2,d1")",
+Fare: a
 }
 
 firebaseRef.set(data);
