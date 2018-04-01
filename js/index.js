@@ -17,7 +17,6 @@ var submitBtn = document.getElementById("submitBtn");
 var name = name.value;
 var age = age.value;
 var phone = phone.value;
-var a = "yes";
 
 var user = firebase.auth().currentUser;
 var uid = user.uid;
@@ -28,8 +27,7 @@ firebase.auth().currentUser.sendEmailVerification()
 var data = {
 name: name,
 age: age,
-phone: phone,
-a: a
+phone: phone
 }
 
 firebaseRef.set(data);
