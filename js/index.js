@@ -9,7 +9,7 @@ var config = {
 firebase.initializeApp(config);
 
 function abc(){
-var number = document.getElementById("name");
+var name = document.getElementById("name");
 var age = document.getElementById("age");
 var phone = document.getElementById("phone");
 
