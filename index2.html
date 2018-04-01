@@ -9,7 +9,7 @@
 	firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
     } else {
-    window.location.assign("index.html");
+    //window.location.assign("index.html");
     }
     });
 	</script>
@@ -60,10 +60,9 @@
 			<h4> <font color="yellow"> Fill all the details for your identification </font> </h4> <br><br>
 			<form method="get" action="verification.html" onclick="abc()">
 			<div>
-			<p>&nbsp; &nbsp; &nbsp; &nbsp;  <label> <font color="orange"> Roll No. </font> </label> &nbsp; <input type="text" id="number" class="form-control" style="display:inline ; width:200px;" required="required"/> </p>
+			<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <label> <font color="orange"> Name </font> </label> &nbsp; <input type="text" id="name" class="form-control" style="display:inline ; width:200px;" required="required"/> </p>
 			<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <label> <font color="orange"> Age </font> </label> &nbsp;&nbsp; <input type="text" class="form-control" style="display:inline ; width:200px;" id="age" required="required"/></p>
 			<p>&nbsp; &nbsp; <label> <font color="orange"> Phone No. </font> </label> &nbsp; <input type="text" id="phone" class="form-control" style="display:inline ; width:200px;" required="required"/></p>
-			<p>&nbsp;<label> <font color="orange"> Aadhaar No. </font> </label> &nbsp; <input type="text" id="aadhaar" class="form-control" style="display:inline ; width:200px;" required="required"/></p> </div>
             <br> <button id="submitBtn" class="btn btn-success"> Submit </button>
 			</form>
     </center></body>

@@ -9,31 +9,26 @@ var config = {
 firebase.initializeApp(config);
 
 function abc(){
-var number = document.getElementById("number");
+var number = document.getElementById("name");
 var age = document.getElementById("age");
 var phone = document.getElementById("phone");
-var aadhaar = document.getElementById("aadhaar");
 
 var submitBtn = document.getElementById("submitBtn");	
-var roll = number.value;
+var name = name.value;
 var age = age.value;
 var phone = phone.value;
-var aadhaar = aadhaar.value;
 var a = "yes";
 
 var user = firebase.auth().currentUser;
-var ab = user.displayName;
 var uid = user.uid;
 var firebaseRef = firebase.database().ref('Users').child(uid);
 
 firebase.auth().currentUser.sendEmailVerification()
 
 var data = {
-name: ab,
-roll: roll,
+name: name,
 age: age,
 phone: phone,
-aadhaar: aadhaar,
 a: a
 }
 
