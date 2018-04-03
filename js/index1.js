@@ -1,10 +1,10 @@
 var config = {
-    apiKey: "AIzaSyDIsNts-YS5A803UDEg-pELhwtgMmICt6w",
-    authDomain: "aditya-f14ee.firebaseapp.com",
-    databaseURL: "https://aditya-f14ee.firebaseio.com",
-    projectId: "aditya-f14ee",
-    storageBucket: "aditya-f14ee.appspot.com",
-    messagingSenderId: "719539654966"
+    apiKey: "AIzaSyACzgb4GOcf3QBF-KD6bGgfp6uCTo_O4i0",
+    authDomain: "jolt-225c6.firebaseapp.com",
+    databaseURL: "https://jolt-225c6.firebaseio.com",
+    projectId: "jolt-225c6",
+    storageBucket: "jolt-225c6.appspot.com",
+    messagingSenderId: "471829128980"
   };
 firebase.initializeApp(config);
 
