@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
 	    <link class="img" rel="icon" href="img/a.png">
@@ -12,6 +13,13 @@
     window.location.assign("index.html");
     }
     });
+	
+	function checkInput(ob){
+    var invalidChars = /[^0-9]/gi
+            if(invalidChars.test(ob.value)) {
+                    ob.value = ob.value.replace(invalidChars,"");
+          }
+    };
 	</script>
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.2.1/firebaseui.css" />
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -60,9 +68,9 @@
 			<h4> <font color="yellow"> Fill all the details for your identification </font> </h4> <br><br>
 			<form method="get" action="verification.html" onclick="abc()">
 			<div>
-			<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <label> <font color="orange"> Name </font> </label> &nbsp; <input type="text" id="name" class="form-control" style="display:inline ; width:200px;" required="required"/> </p>
-			<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <label> <font color="orange"> Age </font> </label> &nbsp;&nbsp; <input type="number" class="form-control" style="display:inline ; width:200px;" id="age" required="required"/></p>
-			<p>&nbsp; &nbsp; <label> <font color="orange"> Phone No. </font> </label> &nbsp; <input type="number" id="phone" class="form-control" style="display:inline ; width:200px;" required="required"/></p>
+			<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <label> <font color="orange"> Name </font> </label> &nbsp; <input type="text" id="name" class="form-control" style="display:inline ; width:200px;" required="required"/></p>
+			<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <label> <font color="orange"> Age </font> </label> &nbsp;&nbsp; <input type="text" onChange="checkInput(this)" onKeyup="checkInput(this)" pattern="[1-9]{1}[0-9]{1}" title="Age should be of exactly 2 digits" class="form-control" style="display:inline ; width:200px;" id="age" required="required"/></p>
+			<p>&nbsp; &nbsp; <label> <font color="orange"> Phone No. </font> </label> &nbsp; <input type="text" onChange="checkInput(this)" onKeyup="checkInput(this)" pattern="[1-9]{1}[0-9]{9}" title="Phone No. should be of exactly 10 digits" id="phone" class="form-control" style="display:inline ; width:200px;" required="required"/></p>
             <br> <button id="submitBtn" class="btn btn-success"> Submit </button>
 			</form>
     </center></body>
