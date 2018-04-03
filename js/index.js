@@ -20,14 +20,14 @@ var phone = phone.value;
 
 var user = firebase.auth().currentUser;
 var uid = user.uid;
-var firebaseRef = firebase.database().ref('Users').child(uid);
+var firebaseRef = firebase.database().ref('User').child(uid);
 
 firebase.auth().currentUser.sendEmailVerification()
 
 var data = {
-name: name,
-age: age,
-phone: phone
+Name: name,
+Age: age,
+Phone: phone
 }
 
 firebaseRef.set(data);
