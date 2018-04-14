@@ -61,30 +61,6 @@ firebaseRef.on('value', function(snapshot) {
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-<center>
-<h2><font color="white"><i> Hey, Welcome to Jolt </i></font></h2>
-<form action = "map.html">
-<button type="button" class="btn btn-info btn-lg"> Start your Ride </button>
-</form>
-
-<br>
-
-<script>
-firebase.auth().onAuthStateChanged(function(user) {
-    if (user) {
-    } else {
-    window.location.assign("index.html");
-    }
-    });
-
-function exit(){
-firebase.auth().signOut().then(function() {
-  window.location.assign("index.html");
-}, function(error) {
-  console.error('Sign Out Error', error);
-});
-}
-</script>
 
 <style>
 
@@ -102,29 +78,6 @@ body {
   margin: auto;
   height: 106px;
   width: 690px;
-}
-.btn {
-  position: relative;
-  border: 0 !important;
-  cursor: pointer;
-  -webkit-font-smoothing: antialiased;
-  font-weight: bold !important;
-  -webkit-border-radius: 10px;
-  -webkit-background-clip: padding-box;
-  -moz-border-radius: 10px;
-  -moz-background-clip: padding;
-  border-radius: 10px;
-  background-clip: padding-box;
-  -webkit-transition: all 50ms ease;
-  -moz-transition: all 50ms ease;
-  -o-transition: all 50ms ease;
-  transition: all 50ms ease;
-  border: 0;
-  text-shadow: 0px 1px 0px #999999;
-  background-color: #cccccc;
-  -webkit-box-shadow: 0px 6px 0px #999999;
-  -moz-box-shadow: 0px 6px 0px #999999;
-  box-shadow: 0px 6px 0px #999999;
 }
 .btn:focus {
   outline: 0;
@@ -147,46 +100,6 @@ body {
   -moz-box-shadow: inset 0px 3px 0px #999999;
   box-shadow: inset 0px 3px 0px #999999;
 }
-.btn-primary {
-  border: 0;
-  text-shadow: 0px 1px 0px #3071a9;
-  background-color: #428bca;
-  -webkit-box-shadow: 0px 6px 0px #3071a9;
-  -moz-box-shadow: 0px 6px 0px #3071a9;
-  box-shadow: 0px 6px 0px #3071a9;
-}
-.btn-primary:hover {
-  border: 0;
-  background-color: #5697d0 !important;
-  -webkit-box-shadow: 0px 4px 0px #3071a9;
-  -moz-box-shadow: 0px 4px 0px #3071a9;
-  box-shadow: 0px 4px 0px #3071a9;
-}
-.btn-primary:active {
-  -webkit-box-shadow: inset 0px 3px 0px #3071a9;
-  -moz-box-shadow: inset 0px 3px 0px #3071a9;
-  box-shadow: inset 0px 3px 0px #3071a9;
-}
-.btn-success {
-  border: 0;
-  text-shadow: 0px 1px 0px #449d44;
-  background-color: #5cb85c;
-  -webkit-box-shadow: 0px 6px 0px #449d44;
-  -moz-box-shadow: 0px 6px 0px #449d44;
-  box-shadow: 0px 6px 0px #449d44;
-}
-.btn-success:hover {
-  border: 0;
-  background-color: #6ec06e !important;
-  -webkit-box-shadow: 0px 4px 0px #449d44;
-  -moz-box-shadow: 0px 4px 0px #449d44;
-  box-shadow: 0px 4px 0px #449d44;
-}
-.btn-success:active {
-  -webkit-box-shadow: inset 0px 3px 0px #449d44;
-  -moz-box-shadow: inset 0px 3px 0px #449d44;
-  box-shadow: inset 0px 3px 0px #449d44;
-}
 .btn-info {
   border: 0;
   text-shadow: 0px 1px 0px #31b0d5;
@@ -207,67 +120,35 @@ body {
   -moz-box-shadow: inset 0px 3px 0px #31b0d5;
   box-shadow: inset 0px 3px 0px #31b0d5;
 }
-.btn-warning {
-  border: 0;
-  text-shadow: 0px 1px 0px #ec971f;
-  background-color: #f0ad4e;
-  -webkit-box-shadow: 0px 6px 0px #ec971f;
-  -moz-box-shadow: 0px 6px 0px #ec971f;
-  box-shadow: 0px 6px 0px #ec971f;
+
+</style>
+
+<center>
+<h2><font color="white"><i> Hey, Welcome to Jolt </i></font></h2>
+<form action = "map.html">
+<button id="a" class="btn btn-info btn-lg"> Start your Ride </button>
+</form>
+
+<br>
+
+<script>
+firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+    } else {
+    window.location.assign("index.html");
+    }
+    });
+
+function exit(){
+firebase.auth().signOut().then(function() {
+   window.location.assign("index.html");
+}, function(error) {
+  console.error('Sign Out Error', error);
+});
 }
-.btn-warning:hover {
-  border: 0;
-  background-color: #f2b866 !important;
-  -webkit-box-shadow: 0px 4px 0px #ec971f;
-  -moz-box-shadow: 0px 4px 0px #ec971f;
-  box-shadow: 0px 4px 0px #ec971f;
-}
-.btn-warning:active {
-  -webkit-box-shadow: inset 0px 3px 0px #ec971f;
-  -moz-box-shadow: inset 0px 3px 0px #ec971f;
-  box-shadow: inset 0px 3px 0px #ec971f;
-}
-.btn-danger {
-  border: 0;
-  text-shadow: 0px 1px 0px #c9302c;
-  background-color: #d9534f;
-  -webkit-box-shadow: 0px 6px 0px #c9302c;
-  -moz-box-shadow: 0px 6px 0px #c9302c;
-  box-shadow: 0px 6px 0px #c9302c;
-}
-.btn-danger:hover {
-  border: 0;
-  background-color: #de6764 !important;
-  -webkit-box-shadow: 0px 4px 0px #c9302c;
-  -moz-box-shadow: 0px 4px 0px #c9302c;
-  box-shadow: 0px 4px 0px #c9302c;
-}
-.btn-danger:active {
-  -webkit-box-shadow: inset 0px 3px 0px #c9302c;
-  -moz-box-shadow: inset 0px 3px 0px #c9302c;
-  box-shadow: inset 0px 3px 0px #c9302c;
-}
-.btn-link {
-  text-shadow: none;
-  background: none !important;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-}
-.btn-link:hover {
-  border: 0;
-  background: none !important;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  top: 0;
-}
-.btn-link:active {
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  top: 0;
-}
+</script>
+
+<style>
 
   body{
   background: #3a6186; /* fallback for old browsers */
@@ -349,7 +230,7 @@ body {
       </div>
 </section>
 
-<div class="container-fluid" style="background: #1363B6; padding-bottom:10px; padding-top:10px;">
+<div class="container-fluid" style="background: #1363B6; padding-bottom:10px; padding-top:0px;">
     <div class="row">
         <div class="col-sm-1" style="margin: auto;"></div>
         <div class="col-sm-6" style="margin: auto;">
@@ -360,14 +241,15 @@ body {
                     <center>
                         <div class="pb-3 pt-3">
                             <a href="https://play.google.com/store/apps/details?id=com.joltindia.jolt.jolt&hl=en"> <img class="img-fluid" style="max-width: 148.5px" src="img/play.png"> </a>
-                            <button class="btn-dark btn" style="background-color: black;"><i class="fa fa-motorcycle"></i> <a href="loginsuccessful.html" style="color:white"> &nbsp;Book online now </a> </button>
+                            <button class="btn-dark btn" style="background-color: black;"><i class="fa fa-motorcycle"></i> <a href="" style="color:white"> &nbsp;Book online now </a> </button>
                         </div>
                     </center>
                 </div>
             </div>
         </div>
         <div class="col-sm-5"><center>
-            <img class="img-fluid" style="max-height:400px; border-radius: 30px;" src="img/demo2.png">
+		<br>
+        <img class="img-fluid" style="max-height:400px; border-radius: 30px;" src="img/demo2.png">
         </center></div>
     </div>
 </div>
